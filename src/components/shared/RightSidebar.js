@@ -12,7 +12,7 @@ function RightSidebar({ userId }) {
   // Establish the WebSocket connection when the component mounts
   useEffect(() => {
     if (accessToken && !socket) {
-      const newSocket = io("http://localhost:3000", {
+      const newSocket = io("https://myblog3.shop", {
         query: {
           accessToken,
         },

@@ -2,7 +2,7 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
 
-const baseURL = 'http://localhost:3000';
+const baseURL = 'https://myblog3.shop';
 
 const instance = axios.create({
   baseURL,

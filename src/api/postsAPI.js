@@ -14,7 +14,7 @@ export const GetPosts = async () => {
     export const CreatePost = async (completeFormData) => {
         try {
     
-         await instance.post(`http://localhost:3000/posts/createPosts`, completeFormData,{
+         await instance.post(`/posts/createPosts`, completeFormData,{
                },
        
             )
