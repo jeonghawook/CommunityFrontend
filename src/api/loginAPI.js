@@ -42,4 +42,27 @@ export const Logout = async () => {
     }
 }
 
+export const kakaoLogin = async () => {
+    try {
+      const response = await instance.get('/users/login/kakao')
+
+        if (response) {
+            const refreshToken = response.data.refreshToken;
+            const accessToken = response.data.accessToken;
+
+            localStorage.setItem('accessToken', accessToken);
+            localStorage.setItem('refreshToken', refreshToken);
+
+            const decodedToken = jwt_decode(accessToken);
+
+            const { nickname, email, userId } = decodedToken;
+
+            return ({ email, userId, nickname });
+        }
+    } catch (error) {
+        console.log(error)
+        
+    }
+}
+
 //유저 탈퇴 , 유저 수정, 유저 비번 수정

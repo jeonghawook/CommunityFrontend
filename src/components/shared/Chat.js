@@ -16,8 +16,10 @@ const Chat = ({ friendName, userId, socket }) => {
       socket.on("chatMessage", (message) => {
         console.log("message"+message.text);
         // Add the incoming message to your chat
+        if ((message.to === userId && message.myId === friendName) || (message.to === friendName && message.myId === userId)) {
         setChat((prevChat) => [...prevChat, { text: message.text, sender: message.myId  }]);
         console.log(chat);
+        }
       });
 
     }

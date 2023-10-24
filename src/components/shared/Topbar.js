@@ -12,7 +12,7 @@ import {
   Link
 } from "@chakra-ui/react";
 import { FaUser } from "react-icons/fa";
-import { Login, Logout } from "../../api/loginAPI";
+import { Login, Logout, kakaoLogin } from "../../api/loginAPI";
 import { useMutation } from "react-query";
 import LoginModal from "../loginModal";
 import KAKAOCOMMUNITY from "../../assets/KAKAOCOMMUNITY.png";
@@ -32,6 +32,7 @@ console.log("topbar")
       navigate("/member")
     },
   });
+
 
   const handleLogin = (loginDto) => {
     userLogin.mutate(loginDto);
@@ -98,7 +99,7 @@ console.log("topbar")
                     isOpen={showLoginModal}
                     onClose={() => setShowLoginModal(false)}
                     handleLogin={handleLogin}
-                  />
+                       />
                 )}
               </Box>
             )}

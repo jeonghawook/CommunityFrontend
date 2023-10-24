@@ -9,7 +9,8 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Textarea
+  Textarea,
+  Image
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useMutation, useQuery, useQueryClient } from "react-query";
@@ -107,11 +108,12 @@ function CreatePostModal({ isOpen, onClose }) {
             <Flex direction="column" align="center" mt={4}>
               <Flex align="center" justify="center" marginBottom="1rem" overflow='hidden'>
                 {imagePreviews.map((preview, index) => (
-                  <img
+                  <Image
                     key={index}
                     src={preview}
                     alt={`Preview ${index}`}
-                 
+                    maxH="500px" 
+                    maxW="400px"
                   />
                 ))}
               </Flex>

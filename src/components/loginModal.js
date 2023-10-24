@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Input, Button } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import axios from 'axios';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  Input,
+  Button,
+  Image,
+  
+  Box,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import KAKAOLOGIN from "../assets/KAKAOLOGIN.png";
 
-
-
-const LoginModal = ({ isOpen, onClose, handleLogin }) => {
-  const [userEmail, setUserEmail] = useState('');
-  const [password, setPassword] = useState('');
+const LoginModal = ({ isOpen, onClose, handleLogin, handleKakaoLogin }) => {
+  const [userEmail, setUserEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleEmailChange = (e) => {
     setUserEmail(e.target.value);
@@ -18,14 +31,18 @@ const LoginModal = ({ isOpen, onClose, handleLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const loginDto = { userEmail, password }
+    const loginDto = { userEmail, password };
     handleLogin(loginDto);
-
   };
 
   const handleSignUpClick = () => {
     onClose();
   };
+
+  const kakaoLogin= async()=>{
+ //  axios.get('http://localhost:3000/users/login/kakao')
+    
+}
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -37,20 +54,41 @@ const LoginModal = ({ isOpen, onClose, handleLogin }) => {
           <form onSubmit={handleSubmit}>
             <div>
               <label>이메일:</label>
-              <Input type="text" value={userEmail} onChange={handleEmailChange} />
+              <Input
+                type="text"
+                value={userEmail}
+                onChange={handleEmailChange}
+              />
             </div>
             <div>
               <label>비밀번호:</label>
-              <Input type="password" value={password} onChange={handlePasswordChange} />
+              <Input
+                type="password"
+                value={password}
+                onChange={handlePasswordChange}
+              />
             </div>
+
             <Button type="submit" colorScheme="blue" mt={4}>
               로그인
             </Button>
-            <Button type="submit" colorScheme="blue" ml={4} mt={4} onClick={handleSignUpClick}>
-              <Link to={'/signup'} > 회원가입</Link>
+            <Button
+              type="submit"
+              colorScheme="blue"
+              ml={2}
+              mt={4}
+              onClick={handleSignUpClick}
+            >
+              <Link to={"/signup"}> 회원가입</Link>
             </Button>
           </form>
         </ModalBody>
+        <ModalFooter justifyContent="left">
+       
+          <a href="http://localhost:3000/users/login/kakao" style={{ padding: 0, width: "auto" }}>
+            <Image src={KAKAOLOGIN} style={{ width: "100%", height: "auto" }} />
+          </a>
+        </ModalFooter>
       </ModalContent>
     </Modal>
   );

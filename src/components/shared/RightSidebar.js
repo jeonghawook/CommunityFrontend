@@ -7,12 +7,27 @@ function RightSidebar({ userId }) {
   const [selectedFriend, setSelectedFriend] = useState(null);
   const [connectedUsers, setConnectedUsers] = useState([]);
   const [socket, setSocket] = useState(null);
+  const [openChats, setOpenChats] = useState([]); // Store users with open chat windows
   const accessToken = localStorage.getItem("accessToken");
+
+ 
+  const openChat = (friendName) => {
+    if (!openChats.includes(friendName)) {
+      setOpenChats([...openChats, friendName]);
+    }
+    setSelectedFriend(friendName);
+  };
+
+
+  const closeChat = (friendName) => {
+    setOpenChats(openChats.filter((chat) => chat !== friendName));
+    setSelectedFriend(null);
+  };
 
   // Establish the WebSocket connection when the component mounts
   useEffect(() => {
     if (accessToken && !socket) {
-      const newSocket = io("https://myblog3.shop", {
+      const newSocket = io("http://localhost:3000", {
         query: {
           accessToken,
         },
@@ -35,14 +50,23 @@ function RightSidebar({ userId }) {
         {connectedUsers.map((user, index) => (
           <Flex
             key={index}
-            onClick={() => setSelectedFriend(user)} // Set the selected friend
+            onClick={() => openChat(user)} // Open a chat with the selected friend
             style={{ cursor: "pointer" }}
           >
             <Text ml="3">{user}</Text>
           </Flex>
         ))}
       </Flex>
-      {selectedFriend && <Chat friendName={selectedFriend} userId={userId} socket={socket} />}
+      {openChats.map((friendName) => (
+        <Chat
+          key={friendName}
+          friendName={friendName}
+          userId={userId}
+          socket={socket}
+          active={friendName === selectedFriend}
+          onChatClose={() => closeChat(friendName)} // Close chat when user clicks the close button
+        />
+      ))}
     </Box>
   );
 }

@@ -11,6 +11,8 @@ import LeftSidebar from "./components/shared/LeftSidebar";
 import CreatePage from "./pages/CreatePage";
 import RightSidebar from "./components/shared/RightSidebar";
 import useAuthStore from "./api/store";
+import socialLogin from "./components/socialLogin";
+import SocialLogin from "./components/socialLogin";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +61,7 @@ function App() {
               }}
             >
               <Routes>
+                <Route path="/socialLogin" element={<SocialLogin/>}/>
                 <Route path="/" element={<DefaultPage />} />
                 <Route path="/member" element={<MainPage />} />
                 <Route path="/store/:storeId/page" element={<StorePage />} />

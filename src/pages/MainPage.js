@@ -43,14 +43,13 @@ function MainPage() {
         <Box display="flex" justifyContent="center" padding="5%" size="lg">
        
           <Button
-          
             type="text"
             name="postDescriptionInput"
             background="white"
             onClick={openModal}
             width="100%"
-          textAlign={"left"}
-          justifyContent={"left"}
+            minWidth="100px"
+            maxWidth="300px"
           >SHARE YOUR STORY</Button>
         </Box>
         <CreatePostModal isOpen={isModalOpen} onClose={closeModal} />
