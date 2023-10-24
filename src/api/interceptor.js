@@ -2,7 +2,7 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
 
-const baseURL = 'http://localhost:3000';
+const baseURL = 'https://cacaocom.vercel.app';
 
 const instance = axios.create({
   baseURL,
