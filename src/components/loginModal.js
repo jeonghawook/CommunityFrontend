@@ -85,7 +85,7 @@ const LoginModal = ({ isOpen, onClose, handleLogin, handleKakaoLogin }) => {
         </ModalBody>
         <ModalFooter justifyContent="left">
        
-          <a href="hhttps://myblog3.shop/users/kakao/callback" style={{ padding: 0, width: "auto" }}>
+          <a href="https://myblog3.shop/users/kakao/callback" style={{ padding: 0, width: "auto" }}>
             {/* http://localhost:3000/users/login/kakao */}
             <Image src={KAKAOLOGIN} style={{ width: "100%", height: "auto" }} />
           </a>
