@@ -8,8 +8,7 @@ function SocialLogin() {
   const { login } = useAuthStore();
   const navigate = useNavigate();
   
-  const allCookies = Cookies.get();
-  console.log("All Cookies1:", allCookies);
+
 
   useEffect(() => {
     const accessToken = Cookies.get("accessToken");
@@ -18,7 +17,7 @@ function SocialLogin() {
     localStorage.setItem('refreshToken', refreshToken);
     
     console.log("socialLogin working")
-    const allCookies = Cookies.get();
+    const allCookies = Cookies.get('accessToken');
     console.log("All Cookies2:", allCookies);
     const decodedToken = jwt_decode(accessToken);
     const { nickname, email, userId } = decodedToken;
