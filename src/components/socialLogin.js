@@ -7,20 +7,24 @@ import jwt_decode from 'jwt-decode';
 function SocialLogin() {
   const { login } = useAuthStore();
   const navigate = useNavigate();
-  const accessToken = Cookies.get("accessToken");
-  const refreshToken = Cookies.get("refreshToken");
-  localStorage.setItem('accessToken',accessToken)
-  localStorage.setItem('refreshToken', refreshToken);
+  
+  const allCookies = Cookies.get();
+  console.log("All Cookies1:", allCookies);
 
   useEffect(() => {
+    const accessToken = Cookies.get("accessToken");
+    const refreshToken = Cookies.get("refreshToken");
+    localStorage.setItem('accessToken',accessToken)
+    localStorage.setItem('refreshToken', refreshToken);
+    
     console.log("socialLogin working")
+    const allCookies = Cookies.get();
+    console.log("All Cookies2:", allCookies);
     const decodedToken = jwt_decode(accessToken);
     const { nickname, email, userId } = decodedToken;
 
-    // Call the `login` function within the `useEffect` to ensure it doesn't conflict with rendering
     login(email, userId, nickname);
 
-    // After setting the state, navigate to the desired route
     navigate("/member");
 
   }, [accessToken, login, navigate]);
