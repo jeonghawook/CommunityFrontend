@@ -27,7 +27,7 @@ function SocialLogin() {
 
     navigate("/member");
 
-  }, [accessToken, login, navigate]);
+  }, [login, navigate]);
 
   return (
     <div>
