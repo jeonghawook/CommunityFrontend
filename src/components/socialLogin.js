@@ -13,6 +13,7 @@ function SocialLogin() {
   localStorage.setItem('refreshToken', refreshToken);
 
   useEffect(() => {
+    console.log("socialLogin working")
     const decodedToken = jwt_decode(accessToken);
     const { nickname, email, userId } = decodedToken;
 
