@@ -39,10 +39,12 @@ const LoginModal = ({ isOpen, onClose, handleLogin, handleKakaoLogin }) => {
     onClose();
   };
 
+
   const kakaoLogin= async()=>{
- //  axios.get('http://localhost:3000/users/login/kakao')
-    
-}
+  const  url = await axios.get('https://myblog3.shop/users/login/kakao')
+  console.log(url.data)
+  document.location.href = url.data;
+} 
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -85,10 +87,11 @@ const LoginModal = ({ isOpen, onClose, handleLogin, handleKakaoLogin }) => {
         </ModalBody>
         <ModalFooter justifyContent="left">
        
-          <a href="https://myblog3.shop/users/kakao/callback" style={{ padding: 0, width: "auto" }}>
+<Button onClick={kakaoLogin}>          {/* <a href=" http://localhost:3000/users/login/kakao" style={{ padding: 0, width: "auto" }}>
             {/* http://localhost:3000/users/login/kakao */}
             <Image src={KAKAOLOGIN} style={{ width: "100%", height: "auto" }} />
-          </a>
+            </Button>
+  
         </ModalFooter>
       </ModalContent>
     </Modal>
