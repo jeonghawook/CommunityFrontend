@@ -27,9 +27,9 @@
      <td>로그인</td>
    </tr>
 <tr>
-   <td><img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/44ecc126-ab9e-4472-9b6b-c0fce2424e6f" alt="회원가입 gif" width="500" height="400" />
+   <td><img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/44ecc126-ab9e-4472-9b6b-c0fce2424e6f" alt="회원가입 gif" width="400" height="300" />
    </td>
-  <td><img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/77c5a7e2-c6fa-446b-bb3e-6208255f8479" alt="로그안 gif" width="500" height="400" /></td>
+  <td><img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/77c5a7e2-c6fa-446b-bb3e-6208255f8479" alt="로그안 gif" width="400" height="300" /></td>
 </tr> 
       <tr>
      <td>업로드</td>
@@ -37,9 +37,9 @@
    </tr>
    <tr>
   <td>
-    <img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/151d9234-0650-4da4-ba48-28ae0f6b9575" alt="업로드 gif" width="500" height="400" /></td>
+    <img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/151d9234-0650-4da4-ba48-28ae0f6b9575" alt="업로드 gif" width="400" height="300" /></td>
   <td>
-    <img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/82916a41-0404-4c14-99c0-b81eea7c70b0" alt="카카오로그인+연동 gif" width="500" height="400" />
+    <img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/82916a41-0404-4c14-99c0-b81eea7c70b0" alt="카카오로그인+연동 gif" width="400" height="300" />
 </td>
 </tr>
       <tr>
@@ -48,7 +48,7 @@
    </tr>
  <tr>
    <td>
-       <img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/ebadf163-7c0d-4059-bf78-8f4da86c4287" alt="채팅" gif" width="500" height="400" />
+       <img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/ebadf163-7c0d-4059-bf78-8f4da86c4287" alt="채팅" gif" width="400" height="300" />
    </td>
  </tr>
  </table>
