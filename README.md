@@ -21,11 +21,16 @@
 <img src="https://github.com/jeonghawook/CommunityBackend/assets/126029736/7593b462-b655-4884-8176-eb98ab1cf1c4">
 
 ## **둘러보기**
-  <td><img src="" alt="로그안 gif" width="500" height="400" /></td>
+ <table>
+<tr>
+  <td><img src="https://github.com/jeonghawook/CommunityFrontend/assets/126029736/77c5a7e2-c6fa-446b-bb3e-6208255f8479" alt="로그안 gif" width="500" height="400" /></td>
   <td><img src="" alt="회원가입 gif" width="500" height="400" /></td>
+</tr> 
+   <tr>
   <td><img src="" alt="채팅 gif" width="500" height="400" /></td>
   <td><img src="" alt="카카오로그인+연동 gif" width="500" height="400" /></td>
-
+</tr>
+ </table>
       
 ## **기술 스텍**
 <table>
