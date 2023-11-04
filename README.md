@@ -8,14 +8,11 @@
 ## **주요기술**
 <table>
   <tr>
-  <td>CI/CD</td>
   <td>채팅</td>
  
  </tr>
  <tr>
   <td>소셜로그인</td>
-  <td>HTTPS</td>
- 
  </tr>
 
 </table>
@@ -23,6 +20,13 @@
 ## **아키택처**
 <img src="https://github.com/jeonghawook/CommunityBackend/assets/126029736/7593b462-b655-4884-8176-eb98ab1cf1c4">
 
+## **둘러보기**
+  <td><img src="" alt="로그안 gif" width="500" height="400" /></td>
+  <td><img src="" alt="회원가입 gif" width="500" height="400" /></td>
+  <td><img src="" alt="채팅 gif" width="500" height="400" /></td>
+  <td><img src="" alt="카카오로그인+연동 gif" width="500" height="400" /></td>
+
+      
 ## **기술 스텍**
 <table>
  <tr>
