@@ -93,7 +93,7 @@
 </table>
 
 ## **트러블슈팅** 
-작성중....socket 사용방식, 개인별 채팅 방식
+[각 채팅방으로 메세지 나누기](https://velog.io/@saro3/FE-%EC%B1%84%ED%8C%85-%EB%B0%9B%EC%9D%84-%EB%95%8C-%EC%A3%BC%EC%9D%98)
 <br>
 
 
