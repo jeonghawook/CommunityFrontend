@@ -80,7 +80,7 @@
   </td>
   </tr>
    <tr>
-    <td><strong>React query/strong></td>
+    <td><strong>React query</strong></td>
     <td>- 캐싱 처리 가능, 자동 로직 실행 가능<br />
 - 성공과 실패에 따라 다양한 로직 수행 가능. 무엇보다 API랑 코드를 관리하기 쉬움</td>
   </tr>
